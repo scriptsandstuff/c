@@ -1,0 +1,211 @@
+/** {
+	box-sizing: border-box;
+}*/
+
+*, body {
+	margin: 0;
+	border: none;
+}
+
+
+
+.vis-item.vis-background.byAct.act_census.odd {
+	background-color: #707070; 
+	z-index: -2;
+}
+
+.vis-item.vis-background.byAct.act_census.even {
+	background-color: steelblue; 
+	z-index: -2;
+}
+
+
+
+.vis-item.vis-background.byAct.census_act.odd {
+	background-color: rgba(70, 130, 180, 0.65);
+	z-index: -2;
+}
+
+.vis-item.vis-background.byAct.census_act.even {
+	background-color: gray; 
+	z-index: -2;
+}
+
+.vis-group {
+	border-bottom: none !important;
+}
+
+
+
+
+
+.vis-item.vis-background.byEff.election_census.odd {
+	background-color: steelblue; 
+	z-index: -2;
+}
+
+.vis-item.vis-background.byEff.election_census.even {
+	background-color: #707070; 
+	z-index: -2;
+}
+
+
+
+.vis-item.vis-background.byEff.census_election.odd {
+	background-color: rgba(70, 130, 180, 0.65);
+	z-index: -2;
+}
+
+.vis-item.vis-background.byEff.census_election.even {
+	background-color: gray; 
+	z-index: -2;
+}
+
+
+
+#left-container {
+	box-sizing: border-box; 
+	position: relative;
+	float: left;
+	width: 50%;	
+}
+
+#timeline-container {
+	box-sizing: border-box; 
+	/*position: relative;
+	float: left;
+	width: 50%;*/
+}
+
+#IE-rep-timeline {
+	/*position: relative;*/
+	overflow: hidden;
+}
+
+.arrow-up {
+	box-sizing: border-box; 
+	position: relative;
+	left: calc(50% - 10px);
+	width: 0; 
+	height: 0; 
+	/*mus get this arrow into the timeline...*/
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid white;
+}
+
+#centre_arrow { 
+	box-sizing: border-box; 
+	position: relative;
+	height: 26%;
+	width: 3.0%;
+	left: 48.5%;
+	/*margin-top: 80%;*/
+	/*margin-left: 35%;*/
+	/*margin-right: 35%;*/ 
+	z-index: 9999;
+}
+
+/*#centre_arrow::before {*/
+/*#centre_point_stem {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	background-color: none;
+	width: 100%;
+	height: 60px;
+	border: 2px solid red;
+	border-top: none;	
+}*/
+/*#centre_arrow::before {*/
+#centre_point_right {
+	box-sizing: border-box;
+	position: absolute;
+
+	height: 20px;
+	width: 50%;
+	bottom: 70%;
+	/*right: 48.9%;*/
+	/*left: 50%;*/
+	background-color: red;
+	/*border-right: 0.5% solid black;*/
+	transform: rotate(45deg);
+	/*z-index: 9999;*/
+}
+
+#centre_point_left {
+	box-sizing: border-box;
+	position: absolute;
+	height: 20px;
+	width: 50%;
+	left: 50%;
+	bottom: 70%;
+	/*right: %;*/
+	/*left: 48.9%;*/
+	background-color: red;
+	/*border-right: 0.5% solid black;*/
+	transform: rotate(-45deg);
+	/*z-index: 9999;*/
+}
+
+
+#event_detail {
+	/*height: 75vh;*/
+	/*background-color: orange;*/
+	/*display: "block";*/
+	float: left;
+	width: 51%;
+	overflow: hidden;
+	/*position: relative;*/
+}
+
+#IE_map {
+	/*margin-top: -97px;*/
+	width: 48%;
+	height: 100vh;
+	position: relative;
+	float: right;
+	overflow: hidden;
+}
+
+/*#IE_map >img {*/
+	/*height: 75vh;*/
+	/*width: 100vw;*/
+#map_img {
+	float: right;
+}
+
+.vis-item.act-census {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+.legend {
+line-height: 18px;
+color: #555;
+}
+.legend i {
+width: 18px;
+height: 18px;
+float: left;
+margin-right: 8px;
+opacity: 0.7;
+}
+
+
+.vis-item.vis-background.dail-term {
+	background-color: lightgreen;
+}
