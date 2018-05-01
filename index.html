@@ -4,32 +4,11 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 
-<!-- 
-	<script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
-			integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-			crossorigin="anonymous"></script>
- -->
-  
-  <!-- note: moment.js must be loaded before vis.js, else vis.js uses its embedded version of moment.js -->
-  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script> -->
-
- <!-- 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+ 
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css"> 
--->
-	<link rel="stylesheet" type="text/css" href="../visjs-lib/vis.min.css">
 
-
-	<!-- <link 
-		rel="stylesheet" 
-	 	href="Choropleth%20Tutorial%20-%20Leaflet_files/leaflet.css" 
-	 	integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""
-	>
-    <script 
-    	src="Choropleth%20Tutorial%20-%20Leaflet_files/leaflet.js" 
-    	integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""
-    ></script>
-	-->
+	<!-- <link rel="stylesheet" type="text/css" href="../visjs-lib/vis.min.css"> -->
 
 	<link
 		rel="stylesheet"
@@ -37,7 +16,18 @@
 		integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
 		crossorigin=""
 	/>
-	<link rel="stylesheet" type="text/css" href="my_styles.css">	
+	<link rel="stylesheet" type="text/css" href="/my_styles.css">	
+
+	<script 
+		type="text/javascript" 
+		src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"
+	></script>
+	<script 
+		type="text/javascript" 
+		src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+        integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+        crossorigin=""
+    ></script>
 </head>
 
 
@@ -86,28 +76,29 @@
 
 	
 
-	<script type="text/javascript" src="../visjs-lib/vis.min.js"></script>
+	<!-- <script type="text/javascript" src="../visjs-lib/vis.min.js"></script> -->
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
 	<script 
 		src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
         integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
         crossorigin=""
-    ></script>
+    ></script> -->
 
     <script     	
-    	src="DATA/boundaries2013_2.js"    	
+    	src="/DATA/boundaries2013_2.js"    	
     	type="text/javascript"
     ></script>
     <script     	
-    	src="DATA/boundaries2007_pop2011.js"    	
+    	src="/DATA/boundaries2007_pop2011.js"    	
     	type="text/javascript"
     ></script>
 
-	<script src="DATA/all_items.js" type="text/javascript"></script>	
+	<script src="/DATA/all_items.js" type="text/javascript"></script>	
 	
-	<script src="_timeline_functions.js" type="text/javascript"></script>
-	<script src="_map_functions.js" type="text/javascript"></script>
-	<script src="_constituencies_main.js" type="text/javascript"></script>
-	<script src="_event_listeners.js" type="text/javascript"></script>
+	<script src="/_timeline_functions.js" type="text/javascript"></script>
+	<script src="/_map_functions.js" type="text/javascript"></script>
+	<script src="/_constituencies_main.js" type="text/javascript"></script>
+	<script src="/_event_listeners.js" type="text/javascript"></script>
 			  
 </body>
 </html>
