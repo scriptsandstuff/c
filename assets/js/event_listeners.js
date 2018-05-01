@@ -16,30 +16,53 @@ timeline.on('rangechange', function (properties) {
 /**
  *
  */
+function centreNewInterval(g, t) {
+	
+}
+
 timeline.on('click', function (p) {
+/*
 	// if (rangeChanged) {
 	// 	rangeChanged = false;
 	// 	return;
 	// }
 
-	setCentreDate(timeline, p.time);
-
 	console.log('Bad Bad Bad to have the "selected_track" variable defined outside this funnction');
 	console.log(selected_track);
 
 	// logEvent('rangechange', properties);
-	var what = p.what;
-	var item = p.item;
+	let what = p.what;
+	let item = p.item;
+	let group = p.group;
 	console.log(p);
 	console.log(what + ', ' + item);
 	// if (!isSameInterval(t)) updateStuff(t);
+*/
+	// if click not on one of tracks
+	if ([1, 2, 3, 4].indexOf(p.group) == -1) 
+		return;
+	if (p.time > byAct_act_census[0].end) 
+		return;
+	if (p.time < byAct_census_act[byAct_census_act.length-1].start) 
+		return;
+	
+	if (selected_track == p.group) {
+		if (!isSameInterval(t)) {
+			centreNewInterval(p.group, p.time);
+		}
+	}
+
+
+
+		if (p.group == 1) 
+	setCentreDate(timeline, p.time);
 
 	let t;
 	if (p.what == 'background') {
+
 		t = p.time;
 	} else return;
-	let group = p.group;
-
+	
 	if (isSameInterval(t) && selected_track == group) {
 		
 	} else {
@@ -56,16 +79,16 @@ timeline.on('click', function (p) {
 /** 
  *
  */
-title_info.onAdd = function(map) {
+/*title_info.onAdd = function(map) {
  	this._div = L.DomUtil.create('div', 'info');
 	this.update();
 	return this._div;
- }
+ }*/
 
 /**
  * updated when timeline changed or switch clicked...
  */
-title_info.update = function (props) {
+/*title_info.update = function (props) {
 	console.log("want to see if we can use props of collection rather than of individual feature");
 	console.log("have to write them into the geojson too, they are not in spec but not forbidden");
 	// console.log(props.rep_rat_next);
@@ -78,7 +101,7 @@ title_info.update = function (props) {
 			0 + ' people / TD';
 };
 title_info.addTo(map);
-
+*/
 /**
  *
  */

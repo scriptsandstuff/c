@@ -22,10 +22,10 @@ function loadTiles(map){
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, 
 		{
 			maxZoom: 14,
-			// minZoom:6,
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			minZoom:6,
+			// attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+			// 	'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			// 	'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 			id: 'mapbox.light',
 		}).addTo(map);
 	// L.geoJson(statesData).addTo(map);
@@ -105,9 +105,10 @@ function newLayer(boundaries) {
 /**
  *
  */
-function loadAttribution(){
-	map.attributionControl.addAttribution('Boundary data &copy; <a href="">OSi</a>');
-	map.attributionControl.addAttribution('Population data &copy; <a href="">CSO</a>');
+function loadAttribution(map){
+	map.attributionControl.addAttribution('Imagery © <a href="http://mapbox.com">Mapbox</a>');
+	map.attributionControl.addAttribution('Boundary data &copy; <a href="http://www.osi.ie">OSi</a>');
+	map.attributionControl.addAttribution('Population data &copy; <a href="http://www.cso.ie/en/index.html">CSO</a>');
 }
 
 
@@ -117,7 +118,7 @@ function loadAttribution(){
 function getColor(d) {
 	// got these colors using d3.schemeGreens[6]
  
- 	return d > 30 ? '#FF0000' :
+ 	return d > 30 ? '#8b0000' :
  			d > 29  ? '#006d2c' :
  			d > 28  ? '#31a354' :
  			d > 27  ? '#74c476' :
