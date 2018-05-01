@@ -83,9 +83,15 @@ initTimeline(timeline, tl_item_categories, tracks); //, options);
 timeline.setOptions(options);
 
 
+// div.vis-panel:nth-child(5)
+let pl = document.getElementsByClassName('vis-left');
+console.log('total vis-left = ' + pl.length);
+console.log('vis-left width = ' + pl[0].offsetWidth);
 
-
-
+let arrow = document.getElementsByClassName('arrow-up')
+let w = Math.floor((timeline_container.offsetWidth + pl[0].offsetWidth)/2) - 10;
+console.log('width = ' + w);
+arrow[0].style.left = w+"px";
 
 
 
@@ -98,14 +104,14 @@ timeline.setOptions(options);
 var IE_map = document.getElementById('IE_map'); 	// <div> containing map
 
 var map = L.map('IE_map').setView([53.416, -8.042], 7);	// [37.8, -96], 4); // USA coords
-var title_info = L.control(); // control that shows National stats
+// var title_info = L.control(); // control that shows National stats
 var hover_info = L.control(); // control that shows constituency info on hover
 var legend = L.control({position: 'bottomright'});
 
 loadTiles(map);
 var current_geojson_layer =	newLayer(boundaries2013); //rr'+census);
 current_geojson_layer.addTo(map);
-loadAttribution();
+loadAttribution(map);
 var vector_layers = asyncOtherBoundaries();
 
 

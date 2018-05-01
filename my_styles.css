@@ -62,6 +62,11 @@
 }
 
 
+.vis-item.act-census {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+
 
 #left-container {
 	box-sizing: border-box; 
@@ -85,68 +90,30 @@
 .arrow-up {
 	box-sizing: border-box; 
 	position: relative;
-	left: calc(50% - 10px);
+	/*left: calc(50% - 10px);*/
+	/*background-color: black;*/
+	/*color: black;*/
 	width: 0; 
 	height: 0; 
+	top: -20px;
 	/*mus get this arrow into the timeline...*/
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
-	border-bottom: 20px solid white;
+	border-bottom: 20px solid black;
 }
 
-#centre_arrow { 
+/*#centre_arrow { 
 	box-sizing: border-box; 
 	position: relative;
 	height: 26%;
 	width: 3.0%;
 	left: 48.5%;
+	z-index: 9999;
+}*/
 	/*margin-top: 80%;*/
 	/*margin-left: 35%;*/
 	/*margin-right: 35%;*/ 
-	z-index: 9999;
-}
 
-/*#centre_arrow::before {*/
-/*#centre_point_stem {
-	box-sizing: border-box;
-	position: absolute;
-	bottom: 0;
-	background-color: none;
-	width: 100%;
-	height: 60px;
-	border: 2px solid red;
-	border-top: none;	
-}*/
-/*#centre_arrow::before {*/
-#centre_point_right {
-	box-sizing: border-box;
-	position: absolute;
-
-	height: 20px;
-	width: 50%;
-	bottom: 70%;
-	/*right: 48.9%;*/
-	/*left: 50%;*/
-	background-color: red;
-	/*border-right: 0.5% solid black;*/
-	transform: rotate(45deg);
-	/*z-index: 9999;*/
-}
-
-#centre_point_left {
-	box-sizing: border-box;
-	position: absolute;
-	height: 20px;
-	width: 50%;
-	left: 50%;
-	bottom: 70%;
-	/*right: %;*/
-	/*left: 48.9%;*/
-	background-color: red;
-	/*border-right: 0.5% solid black;*/
-	transform: rotate(-45deg);
-	/*z-index: 9999;*/
-}
 
 
 #event_detail {
@@ -154,7 +121,7 @@
 	/*background-color: orange;*/
 	/*display: "block";*/
 	float: left;
-	width: 51%;
+	/*width: 51%;*/
 	overflow: hidden;
 	/*position: relative;*/
 }
@@ -173,10 +140,6 @@
 	/*width: 100vw;*/
 #map_img {
 	float: right;
-}
-
-.vis-item.act-census {
-	background-color: rgba(255, 0, 0, 0.5);
 }
 
 
@@ -203,9 +166,4 @@ height: 18px;
 float: left;
 margin-right: 8px;
 opacity: 0.7;
-}
-
-
-.vis-item.vis-background.dail-term {
-	background-color: lightgreen;
 }

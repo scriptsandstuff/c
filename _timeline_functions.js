@@ -127,18 +127,6 @@ function initTimeline(timeline, tl_item_categories, tl_tracks) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  *
  */
